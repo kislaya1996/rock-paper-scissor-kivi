@@ -2,10 +2,10 @@
 Programming assignment
 
 
-#To play the game:
-1-> Install python3.
-2-> python3 play-rock-paper-scissor.py from terminal.
+# To play the game:
+[1]: Install python3.
+[2]: python3 play-rock-paper-scissor.py from terminal.
 
 
-#To test the game class:
-run>  python3 test-rps.py.
+# To test the game class:
+[1]:  python3 test-rps.py.
