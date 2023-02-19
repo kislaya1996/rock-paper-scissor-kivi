@@ -2,6 +2,9 @@ import random
 class RockPaperScissor:
     POSSIBLE_MOVES = ['r',"p","s"]
     MOVE_PRIORITY_DICT = {'r':'s' ,'p':'r', 's':'p'}
+    COMPUTER_WIN_MESSAGE = "COMPUTER WINS!"
+    PLAYER_WIN_MESSAGE = "YOU WIN!"
+    DRAW_MESSAGE = "DRAW"
     computer_move = None
     user_move = None
 
@@ -21,13 +24,13 @@ class RockPaperScissor:
     
     def evaluate(self):
         if not (self.computer_move and self.user_move):
-            return "Cannot evaluate game"
+            raise Exception("missing-moves")
         if self.computer_move == self.user_move:
-            return "DRAW"
+            return self.DRAW_MESSAGE
         if self.MOVE_PRIORITY_DICT[self.computer_move] == self.user_move:
-            return "COMPUTER WINS!"
+            return self.COMPUTER_WIN_MESSAGE
         else:
-            return "YOU WIN!"
+            return self.PLAYER_WIN_MESSAGE
 
         
 
